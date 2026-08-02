@@ -29,6 +29,7 @@ Copy `.env.example` to `.env.local` and fill in:
 | `GOOGLE_CLIENT_SECRET` | Same as above |
 | `NEXTAUTH_SECRET` | Any random string (`openssl rand -base64 32`) |
 | `NEXTAUTH_URL` | `http://localhost:3000` locally, your Vercel URL in production |
+| `ADMIN_EMAILS` | Comma-separated emails that can access `/admin` |
 
 Google OAuth redirect URI: `/api/auth/callback/google`
 
@@ -52,4 +53,4 @@ npm start
 
 - **Week 1** ✅ Landing page (hero, features, footer)
 - **Week 2** ✅ User authentication (NextAuth + Google OAuth, protected `/dashboard`)
-- **Week 3** — Admin dashboard (user management + analytics)
+- **Week 3** ✅ Admin dashboard (`/admin` — user management table, analytics stat cards, 7-day signup chart; admin-only via `ADMIN_EMAILS`)

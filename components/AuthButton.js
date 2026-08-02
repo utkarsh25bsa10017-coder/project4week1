@@ -14,6 +14,14 @@ export default function AuthButton() {
   if (session) {
     return (
       <div className="flex items-center gap-3">
+        {session.user?.isAdmin && (
+          <a
+            href="/admin"
+            className="rounded-lg border border-indigo-400/30 bg-indigo-500/10 px-3 py-2 text-sm font-medium text-indigo-300 transition hover:bg-indigo-500/20"
+          >
+            Admin
+          </a>
+        )}
         <a
           href="/dashboard"
           className="hidden items-center gap-2 text-sm text-slate-300 transition hover:text-white sm:flex"
