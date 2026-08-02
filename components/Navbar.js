@@ -1,4 +1,17 @@
+"use client";
+
+import { useState } from "react";
+import AuthButton from "./AuthButton";
+
+const navLinks = [
+  { label: "Features", href: "#features" },
+  { label: "Product", href: "#product" },
+  { label: "Contact", href: "#contact" },
+];
+
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/80 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -10,24 +23,81 @@ export default function Navbar() {
             Kavya Labs
           </span>
         </a>
+
+        {/* Desktop links */}
         <div className="hidden items-center gap-8 text-sm text-slate-300 md:flex">
-          <a href="#features" className="transition hover:text-white">
-            Features
-          </a>
-          <a href="#product" className="transition hover:text-white">
-            Product
-          </a>
-          <a href="#contact" className="transition hover:text-white">
-            Contact
-          </a>
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="transition hover:text-white"
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
-        <a
-          href="#cta"
-          className="rounded-lg bg-indigo-500 px-4 py-2 text-sm font-medium text-white transition hover:bg-indigo-400"
-        >
-          Get Started
-        </a>
+
+        <div className="flex items-center gap-3">
+          <AuthButton />
+
+          {/* Hamburger toggle (mobile only) */}
+          <button
+            type="button"
+            onClick={() => setMenuOpen((open) => !open)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            className="rounded-lg border border-white/15 p-2 text-slate-200 transition hover:border-white/30 hover:bg-white/5 md:hidden"
+          >
+            {menuOpen ? (
+              <svg
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            )}
+          </button>
+        </div>
       </nav>
+
+      {/* Mobile dropdown menu */}
+      {menuOpen && (
+        <div className="border-t border-white/10 bg-ink/95 px-6 py-4 backdrop-blur md:hidden">
+          <div className="flex flex-col gap-1">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </header>
   );
 }
