@@ -1,8 +1,8 @@
-# Kavya Labs — Landing Page
+# TaskFlow — by Kavya Labs
 
 **Finlatics ANDP Simulator · Project-4 "Virtual Startup: Kavya Labs" · Week 1**
 
-Week 1 brief: Landing page with **Hero**, **Features**, and **Footer** for Kavya Labs, a fictional Bengaluru-based AI startup building an AI analytics platform.
+Week 1 brief: Landing page with **Hero**, **Features**, and **Footer** for TaskFlow, TaskFlow, an AI-powered task management platform by Kavya Labs, a fictional Bengaluru-based AI startup.
 
 ## Tech Stack
 
@@ -52,5 +52,5 @@ npm start
 ## Roadmap (per weekly briefs)
 
 - **Week 1** ✅ Landing page (hero, features, footer)
-- **Week 2** ✅ User authentication (NextAuth + Google OAuth, protected `/dashboard`)
+- **Week 2** ✅ User authentication (NextAuth + Google OAuth, protected `/dashboard`, custom `/login` page)
 - **Week 3** ✅ Admin dashboard (`/admin` — user management table, analytics stat cards, 7-day signup chart; admin-only via `ADMIN_EMAILS`)

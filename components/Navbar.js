@@ -13,14 +13,14 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/80 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#" className="flex items-center gap-2">
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500 font-bold text-white">
-            K
+            T
           </span>
           <span className="text-lg font-semibold tracking-tight text-white">
-            Kavya Labs
+            TaskFlow
           </span>
         </a>
 
@@ -83,7 +83,7 @@ export default function Navbar() {
 
       {/* Mobile dropdown menu */}
       {menuOpen && (
-        <div className="border-t border-white/10 bg-ink/95 px-6 py-4 backdrop-blur md:hidden">
+        <div className="border-t border-white/10 bg-slate-950/95 px-6 py-4 backdrop-blur md:hidden">
           <div className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <a

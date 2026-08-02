@@ -6,7 +6,7 @@ import { demoUsers, signupTrend } from "../../lib/demoData";
 import { formatDate, isAdmin } from "../../lib/utils";
 
 export const metadata = {
-  title: "Admin Dashboard — Kavya Labs",
+  title: "Admin Dashboard — TaskFlow",
 };
 
 function StatCard({ label, value, hint }) {
@@ -39,17 +39,17 @@ export default async function AdminPage() {
   const session = await getServerSession(authOptions);
 
   if (!session) {
-    redirect("/api/auth/signin?callbackUrl=/admin");
+    redirect("/login?callbackUrl=/admin");
   }
 
   if (!isAdmin(session.user?.email)) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-ink px-6">
+      <main className="flex min-h-screen items-center justify-center bg-slate-950 px-6">
         <div className="max-w-md rounded-2xl border border-red-400/20 bg-red-500/5 p-8 text-center">
           <p className="text-4xl">🚫</p>
           <h1 className="mt-4 text-2xl font-bold text-white">Access Denied</h1>
           <p className="mt-2 text-slate-400">
-            This area is restricted to Kavya Labs admins. You are signed in as{" "}
+            This area is restricted to TaskFlow admins. You are signed in as{" "}
             <span className="text-slate-200">{session.user?.email}</span>.
           </p>
           <Link
@@ -87,7 +87,7 @@ export default async function AdminPage() {
   const maxSignups = Math.max(...signupTrend.map((d) => d.signups), 1);
 
   return (
-    <main className="min-h-screen bg-ink">
+    <main className="min-h-screen bg-slate-950">
       <div className="mx-auto max-w-6xl px-6 py-16">
         <Link
           href="/"

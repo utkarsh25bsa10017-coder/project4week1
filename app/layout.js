@@ -2,9 +2,9 @@ import Providers from "./providers";
 import "./globals.css";
 
 export const metadata = {
-  title: "Kavya Labs — AI Analytics Platform",
+  title: "TaskFlow — AI Task Management by Kavya Labs",
   description:
-    "Kavya Labs turns your raw data into decisions. Real-time AI analytics for modern teams. Built in Bengaluru.",
+    "TaskFlow is the AI-powered task management platform by Kavya Labs. Prioritize work, predict delays, and keep your team in sync. Built in Bengaluru.",
 };
 
 export default function RootLayout({ children }) {

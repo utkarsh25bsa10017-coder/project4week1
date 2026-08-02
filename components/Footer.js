@@ -37,20 +37,21 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer id="contact" className="border-t border-white/10 bg-panel/60">
+    <footer id="contact" className="border-t border-white/10 bg-slate-900/60">
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-6">
           <div className="col-span-2">
             <a href="#" className="flex items-center gap-2">
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500 font-bold text-white">
-                K
+                T
               </span>
               <span className="text-lg font-semibold tracking-tight text-white">
-                Kavya Labs
+                TaskFlow
               </span>
             </a>
             <p className="mt-4 max-w-xs text-sm text-slate-400">
-              AI analytics for modern teams. Made with ❤️ in Bengaluru, India.
+              AI-powered task management, built by Kavya Labs. Made with ❤️
+              in Bengaluru, India.
             </p>
             <div className="mt-6 flex gap-4">
               {socials.map((social) => (
@@ -93,11 +94,11 @@ export default function Footer() {
         </div>
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
           <p className="text-sm text-slate-500">
-            © {new Date().getFullYear()} Kavya Labs Pvt. Ltd. All rights
-            reserved.
+            © {new Date().getFullYear()} Kavya Labs Pvt. Ltd. TaskFlow is a
+            product of Kavya Labs.
           </p>
           <p className="text-sm text-slate-500">
-            hello@kavyalabs.ai · Bengaluru, Karnataka
+            hello@taskflow.ai · Bengaluru, Karnataka
           </p>
         </div>
       </div>

@@ -5,19 +5,19 @@ export default function Hero() {
       <div className="pointer-events-none absolute -top-40 left-1/2 h-96 w-[42rem] -translate-x-1/2 rounded-full bg-indigo-600/20 blur-3xl" />
       <div className="mx-auto max-w-6xl px-6 pb-24 pt-24 text-center md:pt-32">
         <span className="inline-block rounded-full border border-indigo-400/30 bg-indigo-500/10 px-4 py-1.5 text-xs font-medium tracking-wide text-indigo-300">
-          Built in Bengaluru · Backed by AI
+          Built in Bengaluru · by Kavya Labs
         </span>
         <h1 className="mx-auto mt-6 max-w-3xl text-4xl font-bold leading-tight tracking-tight text-white md:text-6xl">
-          Turn raw data into{" "}
+          Tasks that{" "}
           <span className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-            decisions
+            manage themselves
           </span>
-          , in real time.
+          , teams that ship faster.
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-400">
-          Kavya Labs is the AI analytics platform that plugs into your data
-          stack and surfaces insights, anomalies, and forecasts — before you
-          even ask.
+          TaskFlow is the AI-powered task management platform that prioritizes
+          your work, predicts delays before they happen, and keeps your entire
+          team in sync — automatically.
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
@@ -37,7 +37,7 @@ export default function Hero() {
         {/* stats */}
         <dl className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-8 sm:grid-cols-3">
           {[
-            ["10B+", "events processed daily"],
+            ["10M+", "tasks completed"],
             ["99.99%", "platform uptime"],
             ["500+", "teams shipping faster"],
           ].map(([stat, label]) => (

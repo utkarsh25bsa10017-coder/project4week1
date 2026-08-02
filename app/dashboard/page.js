@@ -4,20 +4,20 @@ import { authOptions } from "../api/auth/[...nextauth]/route";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Dashboard — Kavya Labs",
+  title: "Dashboard — TaskFlow",
 };
 
 export default async function DashboardPage() {
   const session = await getServerSession(authOptions);
 
   if (!session) {
-    redirect("/api/auth/signin?callbackUrl=/dashboard");
+    redirect("/login?callbackUrl=/dashboard");
   }
 
   const { user } = session;
 
   return (
-    <main className="min-h-screen bg-ink">
+    <main className="min-h-screen bg-slate-950">
       <div className="mx-auto max-w-4xl px-6 py-20">
         <Link
           href="/"

@@ -1,33 +1,33 @@
 const features = [
   {
+    icon: "🧠",
+    title: "Smart Prioritization",
+    description:
+      "Our AI ranks every task by impact, effort, and deadline — so your team always works on what matters most.",
+  },
+  {
     icon: "⚡",
     title: "Real-Time Dashboards",
     description:
-      "Stream millions of events into live dashboards with sub-second latency. No refresh button required.",
-  },
-  {
-    icon: "🧠",
-    title: "AI-Powered Insights",
-    description:
-      "Our models automatically surface trends, correlations, and the 'why' behind every metric movement.",
+      "Live views of every project's progress. See blockers, workloads, and velocity update the second they change.",
   },
   {
     icon: "🚨",
-    title: "Anomaly Detection",
+    title: "Delay Prediction",
     description:
-      "Get alerted the moment something breaks the pattern — revenue dips, traffic spikes, fraud signals.",
+      "TaskFlow flags at-risk tasks before deadlines slip, based on your team's actual pace — not wishful thinking.",
   },
   {
-    icon: "📈",
-    title: "Forecasting",
+    icon: "💬",
+    title: "Team Collaboration",
     description:
-      "Predict next quarter's numbers with confidence intervals, powered by models trained on your data.",
+      "Comments, mentions, and file sharing built into every task. No more context lost in chat threads.",
   },
   {
     icon: "🔌",
     title: "50+ Integrations",
     description:
-      "Connect Postgres, Snowflake, Stripe, Salesforce, and more in minutes — no pipelines to maintain.",
+      "Connect Slack, GitHub, Google Calendar, Jira, and more in minutes — your tools, finally talking to each other.",
   },
   {
     icon: "🔒",
@@ -39,15 +39,15 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="border-t border-white/5 bg-panel/40">
+    <section id="features" className="border-t border-white/5 bg-slate-900/40">
       <div className="mx-auto max-w-6xl px-6 py-24">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-            Everything you need to understand your business
+            Everything your team needs to stay in flow
           </h2>
           <p className="mt-4 text-lg text-slate-400">
-            One platform that replaces your dashboards, alerts, and reporting
-            spreadsheets.
+            One platform that replaces your task lists, standup meetings, and
+            status-update spreadsheets.
           </p>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
